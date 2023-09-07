@@ -77,6 +77,9 @@
         font-size: 200;
         color: #06a3a3;
         font-family: 'Libre Baskerville', serif;
+        padding-left: 10pt;
+        padding-right: 10pt;
+
     }
     #left {
         font-size: 30pt;
@@ -84,6 +87,7 @@
     #teaser {
         font-size: 15pt;
         font-family: 'Libre Baskerville', serif;
+        margin: 10pt;
     }
     .button {
         font-size: 20pt;
@@ -115,7 +119,6 @@
     if (window.screen.height > window.screen.width) {
         document.getElementById("timer").style.fontSize = "40pt";
         console.log("font size changed");
-        document.getElementById("teaser").style.fontSize = "10pt";
     }
 
     // Set the date we're counting down to
