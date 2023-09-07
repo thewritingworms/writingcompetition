@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="icon" href="favicon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Writing Competition [The Writing Worms]</title>
+</head>
+<body>
+
+    <ul id="navbar">
+        <li id="navName">The Writing Worms</li>
+        <li><a href="google.com">Essay details</a></li>
+        <li><a href="google.com">Payment details</a></li>
+        <li><a href="google.com">Submit an essay</a></li>
+    </ul>
+
+    <p id="timer" style="font-size: 80pt;"></element></p>
+    <p id="teaser">Welcome to our Essay Writing Competition <br>
+    We invite talented young writers from three age groups to showcase their creativity and writing <br>
+    skills. The challenge is to write an essay describing "A Small Paradise" in great detail. <a href="google.com">Learn More.</a></p>
+
+    <a href="google.com" class="button">Submit an Essay</a>
+    
+</body>
+
+<style>
+    body {
+        margin: 0 auto;
+        text-align: center;
+        background-image: radial-gradient(#ffffff, #bbfcfc);
+    }
+    #teaser {
+        text-align: center;
+        font-family: 'Libre Baskerville', serif;
+        
+    }
+    #navbar {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+    li a{
+        float: right;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Libre Baskerville', serif;
+    }
+    li a:hover {
+        background-color: #047171;
+        color: white;
+    }
+    #navName {
+        float: left;
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+        font-family: 'Libre Baskerville', serif;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #06a3a3;
+    }
+    #timer {
+        text-align: center;
+        font-size: 200;
+        color: #06a3a3;
+        font-family: 'Libre Baskerville', serif;
+    }
+    #left {
+        font-size: 30pt;
+    }
+    #teaser {
+        font-size: 15pt;
+        font-family: 'Libre Baskerville', serif;
+    }
+    .button {
+        font-size: 20pt;
+        font-family: 'Libre Baskerville', serif;
+        background-color: #06a3a3;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        border: none;
+        padding: 20px 20px;
+        border-radius: 15px;
+    }
+    .button:hover {
+        background-color: #047171;
+        color: white;
+    }
+    a {
+        color: #06a3a3;
+    }
+    a:hover {
+        color: #047171;
+    }
+
+</style>
+
+<script>
+    // Set the date we're counting down to
+    var countDownDate = new Date("Oct 15, 2023 00:00:00").getTime();
+    
+    // Update the count down every 1 second
+    var x = setInterval(function() {
+    
+      // Get today's date and time
+      var now = new Date().getTime();
+    
+      // Find the distance between now and the count down date
+      var distance = countDownDate - now;
+    
+      // Time calculations for days, hours, minutes and seconds
+      var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    
+    
+      // If the count down is finished, write some text
+      if (distance < 0) {
+        clearInterval(x);
+        reviewCountDown();
+      } else {
+        // Display the result in the element with id="demo"
+        document.getElementById("timer").innerHTML = days + "d:" + hours + "h:"
+        + minutes + "m" + "  <element id=\"left\">left</element>";
+      }
+    }, 1000);
+
+    function reviewCountDown() {
+        var countDownDate2 = new Date("Oct 30, 2023 00:00:00").getTime();
+    
+        // Update the count down every 1 second
+        var x = setInterval(function() {
+        
+        // Get today's date and time
+        var now = new Date().getTime();
+        
+        // Find the distance between now and the count down date
+        var distance = countDownDate2 - now;
+        
+        // Time calculations for days, hours, minutes and seconds
+        var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        
+        // Display the result in the element with id="demo"
+        document.getElementById("timer").innerHTML = days + "d:" + hours + "h:"
+        + minutes + "m" + "  <element id=\"left\">left for review</element>";
+        
+        // If the count down is finished, write some text
+        if (distance < 0) {
+            clearInterval(x);
+            document.getElementById("timer").style.fontSize = "50pt";
+            document.getElementById("timer").innerHTML = "The essays have been submitted.<br> <a href=\"google.com\">View essays</a>";
+        }
+        }, 1000);
+    }
+    </script>
+
+</html>
