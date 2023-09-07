@@ -111,6 +111,13 @@
 </style>
 
 <script>
+
+    console.log(window.screen.height, window.screen.width)
+    if (window.screen.height > window.screen.width) {
+        document.getElementById("timer").style.fontSize = "50pt";
+        console.log("font size changed");
+    }
+
     // Set the date we're counting down to
     var countDownDate = new Date("Oct 15, 2023 00:00:00").getTime();
     
@@ -165,10 +172,15 @@
         if (distance < 0) {
             clearInterval(x);
             document.getElementById("timer").style.fontSize = "50pt";
+            if (window.screen.height > window.screen.width) {
+                document.getElementById("timer").style.fontSize = "20pt"
+            }
             document.getElementById("timer").innerHTML = "The essays have been submitted.<br> <a href=\"google.com\">View essays</a>";
         }
         }, 1000);
     }
+
+    
     </script>
 
 </html>
